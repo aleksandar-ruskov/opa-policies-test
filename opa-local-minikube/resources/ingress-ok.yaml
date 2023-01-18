@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-ok-2
+spec:
+  rules:
+  - host: signin.qa.acmecorp.com
+    http:
+      paths:
+      - pathType: ImplementationSpecific
+        path: /ok/2
+        backend:
+          service:
+            name: nginx
+            port:
+              number: 80

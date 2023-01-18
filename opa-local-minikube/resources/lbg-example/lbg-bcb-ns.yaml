@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    ingress-allowlist: "*.lbg.bcb.com"
+    required-labels: "lbg-bcb-resource"
+  name: lbg-bcb-project-2
+  

@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: lbg-ingress-bad
+  namespace: lbg-bcb-project-1
+spec:
+  rules:
+  - host: alex.lbg.com
+    http:
+      paths:
+      - pathType: ImplementationSpecific
+        path: /
+        backend:
+          service:
+            name: nginx
+            port:
+              number: 80
